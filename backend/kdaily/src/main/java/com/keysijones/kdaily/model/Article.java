@@ -3,6 +3,7 @@ package com.keysijones.kdaily.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
@@ -14,8 +15,21 @@ public class Article {
     private Integer id;
 
     private String title;
+    private String subtitle;
+
+    //É uma forma de dizer pro banco que este campo poderá ter muitos caracteres
+    @Lob
     private String content;
+    
     private String created;
+
+    public String getSubtitle() {
+        return this.subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
 
     public Integer getId() {
         return this.id;

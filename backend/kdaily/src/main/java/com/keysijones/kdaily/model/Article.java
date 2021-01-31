@@ -3,7 +3,6 @@ package com.keysijones.kdaily.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
 public class Article {
@@ -11,6 +10,7 @@ public class Article {
     @Id
     @GeneratedValue
     private Integer id;
+
     private String title;
     private String content;
     private String created;

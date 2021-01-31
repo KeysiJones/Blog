@@ -3,7 +3,6 @@ package com.keysijones.kdaily.controller;
 import java.util.List;
 
 import com.keysijones.kdaily.model.Article;
-import com.keysijones.kdaily.repository.ArticleRepository;
 import com.keysijones.kdaily.service.ArticleService;
 
 import org.springframework.beans.factory.annotation.Autowired;

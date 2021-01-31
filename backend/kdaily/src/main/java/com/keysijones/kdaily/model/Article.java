@@ -3,8 +3,10 @@ package com.keysijones.kdaily.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="tb_article")
 public class Article {
 
     @Id

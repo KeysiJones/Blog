@@ -10,7 +10,7 @@ $(document).ready(function() {
             resposta.responseJSON.map((article) => {
                 $("#articles").append(`
                 <div class="post-preview">
-                    <a href="/articles/${article.id}">
+                    <a href="/frontend/articles.html?id=${article.id}">
                     <h2 class="post-title">
                         ${article.title}
                     </h2>

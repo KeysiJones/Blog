@@ -30,6 +30,7 @@ $(document).ready(function () {
                 content: content.value,
                 created: "hello"
             },
+            complete: (resposta) => console.log(resposta) 
         })
     })
 })

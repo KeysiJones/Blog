@@ -23,12 +23,12 @@ $(document).ready(function () {
 
         $.ajax({
             method: 'post',
-            url: 'http://localhost:8080/articles/new',
+            url: 'https://kdevblog.herokuapp.com/articles/new',
             data: {
                 title: title.value,
                 subtitle: subTitle.value,
                 content: content.value,
-                created: today
+                created: "hello"
             },
         })
     })

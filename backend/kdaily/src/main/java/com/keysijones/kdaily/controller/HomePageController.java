@@ -2,8 +2,6 @@ package com.keysijones.kdaily.controller;
 
 import java.util.List;
 
-import javax.websocket.server.PathParam;
-
 import com.keysijones.kdaily.model.Article;
 import com.keysijones.kdaily.service.ArticleService;
 
@@ -42,10 +40,9 @@ public class HomePageController {
     }
 
     @PostMapping("/articles/new")
-    public ResponseEntity<Article> novoPost(@Validated Article article) {
-        articleService.save(article);
+    public Article novoPost(@Validated Article article) {
+         return articleService.save(article);
 
-        return new ResponseEntity<Article>(article, HttpStatus.OK);
     }
 
 }

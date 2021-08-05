@@ -1,16 +1,15 @@
+$(document).ready(function () {
+  let data = new Date();
 
-$(document).ready(function() {
-    let data = new Date();
+  $.ajax({
+    method: "get",
+    url: "http://localhost:3001/posts",
 
-    $.ajax({
-        method: 'get',
-        url: 'http://localhost:8080/articles',
-
-        complete: (resposta) => {
-            resposta.responseJSON.map((article) => {
-                $("#articles").append(`
+    complete: (resposta) => {
+      resposta.responseJSON.posts.map((article) => {
+        $("#articles").append(`
                 <div class="post-preview">
-                    <a href="/frontend/articles.html?id=${article.id}">
+                    <a href="/articles.html?id=${article.id}">
                     <h2 class="post-title">
                         ${article.title}
                     </h2>
@@ -22,8 +21,8 @@ $(document).ready(function() {
                     <a href="#">Keysi Jones</a>
                     on ${article.created}</p>
                 </div>
-            `)
-            })
-        } 
-    });
-})
+            `);
+      });
+    },
+  });
+});

@@ -16,7 +16,6 @@ $(document).ready(function () {
       $("article").html(
         `
                 <div id="postDetail">
-                    <h1 class="articleTitle">${resposta.responseJSON.title}</h1>
                     <div>${resposta.responseJSON.body}</div>
                 </div>
                 `

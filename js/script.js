@@ -1,7 +1,5 @@
 $(document).ready(function () {
-  const BASE_URL = process.env.API_URL;
-
-  console.log(`BASE_URL: ${BASE_URL}`);
+  const BASE_URL = "http://localhost:3001";
 
   $.ajax({
     method: "get",

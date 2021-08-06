@@ -1,6 +1,8 @@
 $(function () {
   $("#summernote").summernote();
 
+  const BASE_URL = "https://keysi-node-api.herokuapp.com";
+
   let title = document.querySelector("#form-title");
   let subtitle = document.querySelector("#form-subtitle");
   let body = document.querySelector(
@@ -11,7 +13,7 @@ $(function () {
 
   $.ajax({
     method: "get",
-    url: `http://localhost:3001/post/${postId}`,
+    url: `${BASE_URL}/post/${postId}`,
     complete: (resposta) => {
       if (resposta.status == 200) {
         title.value = resposta.responseJSON.title;
@@ -26,9 +28,6 @@ $(function () {
   });
 
   $("#form-cadastrar-post").submit((evento) => {
-    //let title = document.querySelector("#form-title");
-    //let subTitle = document.querySelector("#form-subtitle");
-
     evento.preventDefault();
 
     var today = new Date();
@@ -40,7 +39,7 @@ $(function () {
 
     $.ajax({
       method: "put",
-      url: `http://localhost:3001/posts/${postId}`,
+      url: `${BASE_URL}/posts/${postId}`,
       dataType: "json",
       contentType: "application/json",
       data: JSON.stringify({

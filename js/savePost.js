@@ -1,6 +1,8 @@
 $(function () {
   $("#summernote").summernote();
 
+  const BASE_URL = "https://keysi-node-api.herokuapp.com";
+
   $("#form-cadastrar-post").submit((evento) => {
     let title = document.querySelector("#form-title");
     let subTitle = document.querySelector("#form-subtitle");
@@ -17,7 +19,7 @@ $(function () {
 
     $.ajax({
       method: "post",
-      url: "http://localhost:3001/posts",
+      url: `${BASE_URL}/posts`,
       dataType: "json",
       contentType: "application/json",
       data: JSON.stringify({

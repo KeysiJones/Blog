@@ -1,9 +1,11 @@
 $(document).ready(function () {
   let id = window.location.search.substring(4);
 
+  const BASE_URL = "https://keysi-node-api.herokuapp.com";
+
   $.ajax({
     method: "get",
-    url: `http://localhost:3001/post/${id}`,
+    url: `${BASE_URL}/post/${id}`,
     complete: (resposta) => {
       $("#postTitle").html(resposta.responseJSON.title);
       $("#postSubTitle").html(resposta.responseJSON.subtitle);

@@ -1,7 +1,6 @@
 $(document).ready(function () {
   const BASE_URL = "http://localhost:3001";
 
-  console.log("testando 123");
   $.ajax({
     method: "get",
     url: `${BASE_URL}/posts`,

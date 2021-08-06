@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
   $("#summernote").summernote();
 
   $("#form-cadastrar-post").submit((evento) => {
@@ -7,8 +7,6 @@ $(document).ready(function () {
     let body = document.querySelector("#summernote");
 
     evento.preventDefault();
-
-    let data = new Date();
 
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, "0");

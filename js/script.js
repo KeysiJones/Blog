@@ -1,9 +1,11 @@
 $(document).ready(function () {
-  let data = new Date();
+  const BASE_URL = process.env.API_URL;
+
+  console.log(`BASE_URL: ${BASE_URL}`);
 
   $.ajax({
     method: "get",
-    url: "http://localhost:3001/posts",
+    url: `${BASE_URL}/posts`,
 
     complete: (resposta) => {
       resposta.responseJSON.posts.map((article) => {

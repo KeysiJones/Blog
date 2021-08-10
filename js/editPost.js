@@ -39,7 +39,7 @@ $(function () {
 
     $.ajax({
       method: "put",
-      url: `${BASE_URL}/posts/${postId}`,
+      url: `${BASE_URL}/post/${postId}`,
       dataType: "json",
       contentType: "application/json",
       data: JSON.stringify({
